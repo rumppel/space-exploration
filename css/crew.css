@@ -1,0 +1,171 @@
+body {
+    background-size: cover;
+    background-image: url("../images/background.jpg");
+    backdrop-filter: blur(2px);
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: Hack, monospace;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: .5s;
+}
+
+a.active {
+    color: #bb1494;
+    font-weight: bold;
+}
+
+nav {
+    margin-top: 2%;
+    width: 98%;
+    background: #0f074a82;
+    padding: 1px;
+    backdrop-filter: blur(3px);
+    position: relative;
+}
+
+.top-left {
+    position: absolute;
+    left: 3%;
+}
+
+ul {
+    justify-content: right;
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #8f8f8f;
+    font-size: 24px;
+    font-weight: 400;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+a:hover {
+    color: #a61384;
+}
+
+.main-content {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+}
+
+svg {
+    fill: rgb(221, 143, 221);
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+}
+
+button:hover svg {
+    fill: #a61384;
+    transition: all 0.5s ease-in-out;
+}
+
+.dark-mode .container {
+    color: rgb(0, 0, 0);
+}
+
+.dark-mode svg {
+    fill: #a61384;
+}
+
+.dark-mode button:hover svg {
+    fill: rgb(221, 143, 221);
+    transition: all 0.5s ease-in-out;
+}
+
+.dark-mode h2 {
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 5px rgb(59, 3, 73);
+}
+
+.dark-mode h1 {
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+.dark-mode article {
+    color: rgb(0, 0, 0);
+}
+
+h2 {
+    color: rgb(230, 171, 227);
+    text-shadow: 2px 2px 5px rgb(59, 3, 73);
+}
+
+h1 {
+    color: rgb(230, 171, 227);
+    text-transform: uppercase;
+}
+
+h3 {
+    font-weight: lighter;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+article {
+    color: rgb(230, 171, 227);
+    background: linear-gradient(0deg, rgba(8, 15, 118, 0), rgba(97, 16, 137, 0.366), rgba(49, 11, 161, 0.612));
+    height: 300px;
+    display: none;
+    width: 50%;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 1%;
+}
+
+article.on {
+    display: block;
+}
+
+.portrait {
+    float: right;
+    margin-top: -350px;
+    position: fixed;
+    top: 690px;
+    left: 1000px;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: #642b5f8d;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 5px;
+
+    position: relative;
+    top: 4px;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+input:checked {
+    background-color: #d626c7e2;
+}

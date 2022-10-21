@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="canonical" href="https://icons.getbootstrap.com/icons/moon-stars-fill/">
+  <link rel="stylesheet" href="../css/technology.css">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="../scripts/scripts.js"></script>
+  <script src="../scripts/smoothpage.js"></script>
+  <link rel="icon" href="../images/icon2.webp">
+  <title>Technology</title>
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="top-left">
+        <button onclick="switcher()">
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
+            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+            </svg>
+        </li>
+      </button>
+      </ul>
+      <ul class="menuItems">
+        <li><a href='../index.html'>HOME</a></li>
+        <li><a href='./destination.html'>DESTINATION</a></li>
+        <li><a href='./crew.html'>CREW</a></li>
+        <li><a href='#' class="active">TECHNOLOGY</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-content">
+            <h2>SPACE LAUNCH</h2>
+            <div class="form-group custom-control custom-radio ">
+                <input type="radio" id="tab1" name="tab" class="custom-control-input" checked placeholder="1"><label class="custom-control-label">1</label>
+            </div>
+            <div class="form-group custom-control custom-radio ">
+                <input type="radio" id="tab2" name="tab" class="custom-control-input" placeholder="1"><label class="custom-control-label">2</label>
+            </div>
+            <div class="form-group custom-control custom-radio">
+                <input type="radio" id="tab2" name="tab" class="custom-control-input" placeholder="1"><label class="custom-control-label">3</label>
+            </div>
+            <div class="technology" id="technology">
+                <article>
+                    <h1>Launch vehicle</h1>
+                    <br>
+                    A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!
+                    <img class="technics" src="../images/shattle.PNG" width="450px" height="450px">
+                </article>
+                <script>
+                fetch("../data.json")
+                    .then(response => response.json())
+                    .then(data => {
+                    for (var i = 1; i<data.technology.length; i++){
+                            let name = data.technology[i].name;
+                            let img = data.technology[i].img;
+                            let description = data.technology[i].description;
+                                document.querySelector("#technology").innerHTML += `
+                                <article>
+                                <h1>${name}</h1>
+                                <br>
+                                ${description}
+                                <img src="${img}" class="technics" width="450px" height="450px">
+                                </article>
+                                `;
+                                }
+                        }
+                    )
+            </script>
+        <script>
+            $('[name=tab]').each(function(i,d){
+            var p = $(this).prop('checked');
+            if(p){
+                $('article').eq(i)
+                .addClass('on');
+            }
+            });  
+
+            $('[name=tab]').on('change', function(){
+            var p = $(this).prop('checked');
+            
+            // $(type).index(this) == nth-of-type
+            var i = $('[name=tab]').index(this);
+            
+            $('article').removeClass('on');
+            $('article').eq(i).addClass('on');
+            });
+        </script>
+        </div>
+  </main>
+
+</body>
+</html>

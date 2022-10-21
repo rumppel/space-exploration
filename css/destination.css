@@ -1,0 +1,174 @@
+body {
+  background-size: cover;
+  background-image: url("../images/spacee.jpg");
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: Hack, monospace;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: .5s;
+}
+
+a.active {
+  color: #bb1494;
+  font-weight: bold;
+}
+
+nav {
+  margin-top: 2%;
+  width: 98%;
+  background: #0f074a82;
+  padding: 1px;
+  backdrop-filter: blur(3px);
+  position: relative;
+}
+
+.top-left {
+  position: absolute;
+  left: 3%;
+}
+
+ul {
+  justify-content: right;
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #8f8f8f;
+  font-size: 24px;
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+a:hover {
+  color: #a61384;
+}
+
+.main-content {
+  width: 80%;
+  height: 500px;
+  margin: auto;
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
+}
+
+svg {
+  fill: rgb(221, 143, 221);
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+button:hover svg {
+  fill: #a61384;
+  transition: all 0.5s ease-in-out;
+}
+
+.dark-mode .container {
+  color: rgb(0, 0, 0);
+}
+
+.dark-mode svg {
+  fill: #a61384;
+}
+
+.dark-mode button:hover svg {
+  fill: rgb(221, 143, 221);
+  transition: all 0.5s ease-in-out;
+}
+
+
+.container-left {
+  text-align: left;
+  width: 49%;
+  margin-top: 20px;
+  color: rgb(230, 171, 227);
+}
+
+.container-right {
+  text-align: justify;
+  text-align-last: justify;
+  width: 40%;
+  /* height: 245px;
+      margin-left: 49%;
+      margin-top: -300px; */
+  color: rgb(238, 165, 234);
+  background-color: rgba(35, 10, 69, 0.69);
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 21px;
+  position: fixed;
+  top: 40%;
+  left: 49%;
+  right: 0;
+}
+
+h2 {
+  color: rgb(230, 171, 227);
+  text-shadow: 2px 2px 5px rgb(59, 3, 73);
+}
+
+h1 {
+  line-height: 10px;
+}
+
+.buttons {
+  width: 40%;
+  position: fixed;
+  top: 33%;
+  left: 49%;
+  right: 0;
+  text-align: justify;
+  text-align-last: justify;
+}
+
+.buttons button {
+  font-size: 24px;
+  color: rgb(230, 171, 227);
+  text-shadow: 2px 2px 5px rgb(59, 3, 73);
+  transition: all 0.3s ease-in-out;
+}
+
+.buttons button:hover {
+  font-size: 24px;
+  color: rgb(59, 3, 73);
+  text-shadow: 2px 2px 5px rgb(230, 171, 227);
+}
+
+table {
+  width: 100%;
+  border-top: rgb(230, 171, 227);
+  border-bottom: rgba(230, 171, 227, 0);
+  border: 1px solid;
+  padding: 4px;
+  text-align: left;
+  text-align-last: left;
+  border-radius: 8px;
+}
+
+th {
+  font-size: 14px;
+}
+
+td {
+  font-size: 26px;
+}
+
+button:focus {
+  color: #a61384;
+  text-shadow: 2px 2px 2px rgb(191, 157, 200);
+}

@@ -1,0 +1,164 @@
+body {
+  background-size: cover;
+  background-image: url("../images/space1.webp");
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: Hack, monospace;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: .5s;
+}
+
+a.active {
+  color: #bb1494;
+  font-weight: bold;
+}
+
+nav {
+  margin-top: 2%;
+  width: 98%;
+  background: #0f074a82;
+  padding: 1px;
+  backdrop-filter: blur(3px);
+  position: relative;
+}
+
+.top-left {
+  position: absolute;
+  left: 3%;
+}
+
+ul {
+  justify-content: right;
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #8f8f8f;
+  font-size: 24px;
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+a:hover {
+  /* color: #7713a6; */
+  color: #bb1494;
+}
+
+.main-content {
+  width: 85%;
+  height: 70%;
+  margin: auto;
+}
+
+.container {
+  text-align: justify;
+  text-align-last: justify;
+  max-width: 480px;
+  margin-top: 20px;
+  color: rgb(238, 165, 234);
+}
+
+.p1 {
+  font-size: 24px;
+  line-height: 0px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.p2 {
+  font-size: 180px;
+  line-height: 0px;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+
+.gradient:hover {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(90deg, rgb(8, 15, 118), rgb(96, 16, 137), rgb(144, 5, 144));
+  transition: all 0.5s ease-in-out;
+}
+
+.p3 {
+  font-size: 18px;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.explore {
+  width: 180px;
+  height: 180px;
+  font-size: 28px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.136);
+  color: rgb(251, 69, 251);
+  line-height: 180px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.732);
+  backdrop-filter: blur(1px);
+  margin-top: -360px;
+  margin-left: 80.5%;
+}
+
+.explore:hover {
+  background-color: rgba(23, 20, 24, 0.682);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.explore:hover a{
+  color: #bb1494;
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
+}
+
+svg {
+  fill: rgb(221, 143, 221);
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+button:hover svg {
+  fill: #a61384;
+  transition: all 0.5s ease-in-out;
+}
+
+.dark-mode .container {
+  color: rgb(0, 0, 0);
+}
+
+.dark-mode svg {
+  fill: #a61384;
+}
+
+.dark-mode button:hover svg {
+  fill: rgb(221, 143, 221);
+  transition: all 0.5s ease-in-out;
+}
+
+.dark-mode .explore {
+  background-color: rgba(0, 0, 0, 0.527);
+  color: rgb(192, 27, 192);
+}
+
+.dark-mode .explore:hover {
+  background-color: rgba(255, 255, 255, 0.136);
+  color: rgb(65, 8, 54);
+}
